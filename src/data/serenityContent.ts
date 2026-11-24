@@ -14,7 +14,10 @@ export interface EmblemElement {
   iconScale: number;
 }
 
-export const SERENITY_WORDMARK = '/assets/aistudio/serenity_logo_9895c4c1.png';
+const assetUrl = (path: string) =>
+  `${import.meta.env.BASE_URL.replace(/\/?$/, '/')}${path.replace(/^\/+/, '')}`;
+
+export const SERENITY_WORDMARK = assetUrl('assets/aistudio/serenity_logo_9895c4c1.png');
 
 export const SERENITY_SLOGAN = 'Find me in the future';
 
@@ -76,7 +79,7 @@ export const EMBLEM_ELEMENTS: EmblemElement[] = [
     title: 'La Pasión',
     shortMeaning:
       'Entregarse con ilusión a aquello que nos hace sentir vivos y perseguir lo que soñamos.',
-    image: '/assets/aistudio/cometa_logo_ac0dbce6.png',
+    image: assetUrl('assets/aistudio/cometa_logo_ac0dbce6.png'),
     glowColor: 'rgba(220, 238, 255, 0.34)',
     layout: {
       left: '0.9%',
@@ -90,7 +93,7 @@ export const EMBLEM_ELEMENTS: EmblemElement[] = [
     title: 'La Galaxia',
     shortMeaning:
       'Una promoción unida por el significado de cada estudiante. Un brillo irrepetible en un mismo universo.',
-    image: '/assets/aistudio/galaxia_logo_bf2dbb39.png',
+    image: assetUrl('assets/aistudio/galaxia_logo_bf2dbb39.png'),
     glowColor: 'rgba(142, 68, 236, 0.42)',
     layout: {
       left: '0%',
@@ -104,7 +107,7 @@ export const EMBLEM_ELEMENTS: EmblemElement[] = [
     title: 'Mirar al Cielo',
     shortMeaning:
       'Un reflejo de quien eres: atreverse a mirar arriba y soñar en grande sin dejar de aspirar a más.',
-    image: '/assets/aistudio/silueta_logo_e302909d.png',
+    image: assetUrl('assets/aistudio/silueta_logo_e302909d.png'),
     glowColor: 'rgba(233, 226, 245, 0.24)',
     layout: {
       left: '10.6%',
@@ -118,7 +121,7 @@ export const EMBLEM_ELEMENTS: EmblemElement[] = [
     title: 'La Luz Interior',
     shortMeaning:
       'Ese brillo único que te define y que, aunque intentes ocultarlo, siempre termina saliendo.',
-    image: '/assets/aistudio/estrella_logo_2ab4667f.png',
+    image: assetUrl('assets/aistudio/estrella_logo_2ab4667f.png'),
     glowColor: 'rgba(217, 0, 255, 0.44)',
     layout: {
       left: '20.2%',
